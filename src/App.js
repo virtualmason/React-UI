@@ -31,15 +31,9 @@ class App extends Component {
       : (nullOb = artperson);
 
     const divStyle = {
-      position: "absolute",
-      right: "20%",
-      height: "30%",
-      top: "20%",
-      marginLeft: "5%",
-      marginTop: "-100px",
+      display: "inline-block",
       padding: "5px 0px 0px 5px",
-      marginRight: "0",
-      clear: "both"
+      width: "400px"
     };
 
     return (
@@ -86,16 +80,18 @@ class App extends Component {
           </div>
         ))}
 
-        <Row style={divStyle}>
+        <div style={divStyle}>
           <Col>
             {artperson === artist && (
               <React.Fragment>
                 <div
                   style={{
-                    border: "thin solid black",
-                    paddingBottom: "10px",
-                    PaddingTop: "5px",
-                    marginLeft: "700px"
+                    width: "300px",
+                    height: "5%",
+                    position: "absolute",
+                    bottom: "1000px",
+                    left: "500px",
+                    padding: "5px 0px 0px 5px"
                   }}
                   className="text-center"
                 >
@@ -106,15 +102,15 @@ class App extends Component {
                   <img
                     className="img-fluid"
                     src={artperson.imageURL}
-                    width="100%"
-                    height="100%"
+                    width="30%"
+                    height="30%"
                     alt="img"
                   />
                 </div>
               </React.Fragment>
             )}
           </Col>
-        </Row>
+        </div>
       </Container>
     );
   }
